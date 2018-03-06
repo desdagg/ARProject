@@ -8,6 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+
+import com.wikitude.sdksamples.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+        Toast.makeText(MainActivity.this, "onCreate optionsMenue", Toast.LENGTH_SHORT).show();
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -40,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+        Toast.makeText(MainActivity.this, "onOption ItemSelected" + item.getItemId(), Toast.LENGTH_SHORT).show();
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
